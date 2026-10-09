@@ -1,9 +1,15 @@
+/* ==========================================================================
+   Reset — consistent spacing and box model across browsers
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ==========================================================================
+   Page canvas — centered content, warm off-white background
+   ========================================================================== */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +20,9 @@ body {
     padding: 20px;
 }
 
+/* ==========================================================================
+   Card grid — horizontal row, 24px gap between cards
+   ========================================================================== */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +32,7 @@ body {
     align-items: flex-start;
 }
 
+/* Card shell — fixed 320px width, min height, subtle tan fill */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +44,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Upper block: title, price, feature list (above button) */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name — 22px regular, primary text color #26251e */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +59,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row — baseline-aligned amount + period */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -65,16 +78,19 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Feature block spacing below price */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* “Includes:” / “Everything in Hobby, plus:” — muted 16px */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list — no bullets; rows with checkmark + copy */
 .features-list {
     list-style: none;
     padding: 0;
@@ -95,6 +111,9 @@ body {
     font-weight: 400;
 }
 
+/* ==========================================================================
+   Buttons — pill shape; pinned to bottom of card via margin-top: auto
+   ========================================================================== */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +136,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Pro CTA — dark fill, white label */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +150,9 @@ body {
     background-color: #333;
 }
 
+/* ==========================================================================
+   Dev label — fixed badge at top center (not part of pricing UI)
+   ========================================================================== */
 .page-label {
     position: fixed;
     top: 16px;
